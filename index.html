@@ -26,7 +26,7 @@ tr:nth-child(even) {
 }
 </style>
 </head>
-<body>
+<body onload="calculateCountdown()">
 
 <h3>Countdown to Marticulation Exams</h3>
 
@@ -39,52 +39,52 @@ tr:nth-child(even) {
 	<tr>
 		<td>AI Text</td>
 		<td>Mon 12.2.</td>
-		<td id="date0"></td>
+		<td id="date0">no JS</td>
 	</tr>
 	<tr>
 		<td>AI Essay</td>
 		<td>Mon 12.3.</td>
-		<td id="date1"></td>
+		<td id="date1">no JS</td>
 	</tr>
 	<tr>
 		<td>UE/ET/YH/KE/GE/TE</td>
 		<td>Wed 14.3.</td>
-		<td id="date2"></td>
+		<td id="date2">no JS</td>
 	</tr>
 	<tr>
 		<td>Long Foreign</td>
 		<td>Fri 16.3.</td>
-		<td id="date3"></td>
+		<td id="date3">no JS</td>
 	</tr>
 	<tr>
 		<td>2nd National</td>
 		<td>Mon 19.3.</td>
-		<td id="date4"></td>
+		<td id="date4">no JS</td>
 	</tr>
 	<tr>
 		<td>PS/FI/HI/FY/BI</td>
 		<td>Wed 21.3.</td>
-		<td id="date5"></td>
+		<td id="date5">no JS</td>
 	</tr>
 	<tr>
 		<td>Short Foreign</td>
 		<td>Fri 23.3.</td>
-		<td id="date6"></td>
+		<td id="date6">no JS</td>
 	</tr>
 	<tr>
 		<td>Math</td>
 		<td>Mon 26.6.</td>
-		<td id="date7"></td>
+		<td id="date7">no JS</td>
 	</tr>
 	<tr>
 		<td>Saame</td>
 		<td>Wed 28.3.</td>
-		<td id="date8"></td>
+		<td id="date8">no JS</td>
 	</tr>
 	<tr>
-		<td>Capping</td>
+		<td>Graduation Party</td>
 		<td>Sat 2.6.</td>
-		<td id="date9"></td>
+		<td id="date9">no JS</td>
 	</tr>
 	
 <script>
@@ -100,9 +100,9 @@ var countDownDate6 = new Date("Mar 23, 2018 9:00:00").getTime();
 var countDownDate7 = new Date("Mar 26, 2018 9:00:00").getTime();
 var countDownDate8 = new Date("Mar 28, 2018 9:00:00").getTime();
 var countDownDate9 = new Date("Jun 2, 2018 12:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
+	
+// define function
+function calculateCountdown() {
 
     // Get todays date and time
     var now = new Date().getTime();
@@ -198,7 +198,10 @@ var x = setInterval(function() {
         clearInterval(x);
         document.getElementById("date9").innerHTML = "EXPIRED";
     }
-}, 1000);
+}
+
+// Update the count down every 15 minutes
+var x = setInterval(calculateCountdown(), 900000);
 </script>
 
 </body>
