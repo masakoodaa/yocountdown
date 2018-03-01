@@ -32,10 +32,10 @@ tr:nth-child(even) {
 
 <table style="width:100%">
 	<tr>
-    	<th>Exam</th>
-        <th>Date</th>
-        <th>Countdown</th>
-    </tr>
+    		<th>Exam</th>
+        	<th>Date</th>
+        	<th>Countdown</th>
+    	</tr>
 	<tr>
 		<td>AI Text</td>
 		<td>Mon 12.2.</td>
@@ -101,6 +101,9 @@ var countDownDate6 = new Date("Mar 23, 2018 9:00:00").getTime();
 var countDownDate7 = new Date("Mar 26, 2018 9:00:00").getTime();
 var countDownDate8 = new Date("Mar 28, 2018 9:00:00").getTime();
 var countDownDate9 = new Date("Jun 2, 2018 12:00:00").getTime();
+
+// Update the count down every 15 minutes
+var x = setInterval("calculateCountdown()", 900000);
 	
 // define function
 function calculateCountdown() {
@@ -200,9 +203,7 @@ function calculateCountdown() {
         document.getElementById("date9").innerHTML = "EXPIRED";
     }
 }
-
-// Update the count down every 15 minutes
-var x = setInterval(calculateCountdown(), 900000);
+	
 </script>
 
 </body>
